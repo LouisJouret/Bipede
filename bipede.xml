@@ -1,0 +1,99 @@
+<mujoco model="bipede">
+    <option gravity = "0 0 -9.81"/>
+    <compiler meshdir="assets" angle="radian"/>
+    <asset>
+        <mesh name="hip" file="hip.obj" scale="0.001 0.001 0.001"/>
+        <mesh name="upper_left_leg" file="upper_left_leg.obj" scale="0.001 0.001 0.001"/>
+        <mesh name="lower_left_leg" file="lower_left_leg.obj" scale="0.001 0.001 0.001"/>
+        <mesh name="right_upper_leg" file="right_upper_leg.obj" scale="0.001 0.001 0.001"/>
+        <mesh name="right_lower_leg" file="right_lower_leg.obj" scale="0.001 0.001 0.001"/>
+        <mesh name="left_back_foot" file="left_back_foot.obj" scale="0.001 0.001 0.001"/>
+        <mesh name="left_front_foot" file="left_front_foot.obj" scale="0.001 0.001 0.001"/>
+        <mesh name="left_yaw_knuckle" file="left_yaw_knuckle.obj" scale="0.001 0.001 0.001"/>
+        <mesh name="left_roll_knuckle" file="left_roll_knuckle.obj" scale="0.001 0.001 0.001"/>
+        <mesh name="right_back_foot" file="right_back_foot.obj" scale="0.001 0.001 0.001"/>
+        <mesh name="right_front_foot" file="right_front_foot.obj" scale="0.001 0.001 0.001"/>
+        <mesh name="right_yaw_knuckle" file="right_yaw_knuckle.obj" scale="0.001 0.001 0.001"/>
+        <mesh name="right_roll_knuckle" file="right_roll_knuckle.obj" scale="0.001 0.001 0.001"/>
+        <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="300" height="300"/>
+        <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2"/>
+    </asset>
+    <visual>
+        <headlight diffuse="1 1 1" ambient="1 1 1" specular="0 0 0"/>
+        <rgba haze="0.15 0.25 0.35 1"/>
+        <global azimuth="150" elevation="-20"/>
+    </visual>
+    <worldbody>
+        <light pos="0 0 2" dir="0 0 -1" directional="false"/>
+        <body>
+            <joint type="free"/>
+            <geom type="mesh" mesh="hip" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
+            <body>
+                <joint name="left_roll" type="hinge" axis="0 1 0" pos = "0.15 0 0.9" range = "-0.52 0.52" limited="true"/>
+                <geom type="mesh" mesh="left_roll_knuckle" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
+                <body>
+                    <joint name="left_yaw" type="hinge" axis="0 0  1" pos = "0.2 0.05 0.85" range = "-0.52 0.52" limited="true"/>
+                    <geom type="mesh" mesh="left_yaw_knuckle" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
+                    <body>
+                        <joint name="left_leg" type="hinge" axis="1 0 0" pos = "0.2 0 0.8" range = "-1.56 1.56" limited="true"/>
+                        <geom type="mesh" mesh="upper_left_leg" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
+                        <body>
+                            <joint name="left_knee" type="hinge" axis="1 0 0" pos = "0 0.05 0.5" range ="-1.56 1.56" limited="true"/>
+                            <geom type="mesh" mesh="lower_left_leg" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
+                            <body>
+                                <joint name="left_ankle" type="hinge" axis="1 0 0" pos = "0 0 0.06" range = "-0.52 0.52" limited="true"/>
+                                <geom type="mesh" mesh="left_back_foot" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
+                                <body>
+                                    <joint name="left_toes" type="hinge" axis="1 0 0" pos = "0.1 0 0.03" range = "-0.52 0.52" limited="true"/>
+                                    <geom type="mesh" mesh="left_front_foot" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+            <body>
+                <joint name="right_roll" type="hinge" axis="0 1 0" pos = "-0.15 0 0.9" range = "-0.52 0.52" limited="true"/>
+                <geom type="mesh" mesh="right_roll_knuckle" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
+                <body>
+                    <joint name="right_yaw" type="hinge" axis="0 0  1" pos = "-0.2 0 0.85" range = "-0.52 0.52" limited="true"/>
+                    <geom type="mesh" mesh="right_yaw_knuckle" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
+                    <body>
+                        <joint name="right_leg" type="hinge" axis="1 0 0" pos = "-0.2 0.05 0.85" range = "-1.56 1.56" limited="true"/>
+                        <geom type="mesh" mesh="right_upper_leg" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
+                        <body>
+                            <joint name="right_knee" type="hinge" axis="1 0 0" pos = "0 0.05 0.5" range = "-1.56 1.56" limited="true"/>
+                            <geom type="mesh" mesh="right_lower_leg" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
+                            <body>
+                                <joint name="right_ankle" type="hinge" axis="1 0 0" pos = "0 0 0.06" range = "-0.52 0.52" limited="true"/>
+                                <geom type="mesh" mesh="right_back_foot" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
+                                <body>
+                                    <joint name="right_toes" type="hinge" axis="1 0 0" pos = "0.1 0 0.03" range = "-0.52 0.52" limited="true"/>
+                                    <geom type="mesh" mesh="right_front_foot" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+        <geom name="floor" size="0 0 .125" type="plane" material="groundplane" conaffinity="15" condim="3"/>
+        <camera name="following_camera" pos="0 0 1" euler="0 0 0"/>
+    </worldbody>
+    <actuator>
+        <motor name="leftyaw" joint="left_yaw" gear="1" ctrlrange="-100 100"/>
+        <motor name="left_leg" joint="left_leg" gear="1" ctrlrange="-100 100"/>
+        <motor name="left_knee" joint="left_knee" gear="1" ctrlrange="-100 100"/>
+        <motor name="left_ankle" joint="left_ankle" gear="1" ctrlrange="-100 100"/>
+        <motor name="leftroll" joint="left_roll" gear="1" ctrlrange="-100 100"/>
+        <motor name="left_toes" joint="left_toes" gear="1" ctrlrange="-100 100"/>
+        
+        <motor name="rightroll" joint="right_roll" gear="1" ctrlrange="-100 100"/>
+        <motor name="rightyaw" joint="right_yaw" gear="1" ctrlrange="-100 100"/>
+        <motor name="right_leg" joint="right_leg" gear="1" ctrlrange="-100 100"/>
+        <motor name="right_knee" joint="right_knee" gear="1" ctrlrange="-100 100"/>
+        <motor name="right_ankle" joint="right_ankle" gear="1" ctrlrange="-100 100"/>
+        <motor name="right_toes" joint="right_toes" gear="1" ctrlrange="-100 100"/>
+        
+  </actuator>
+</mujoco>
