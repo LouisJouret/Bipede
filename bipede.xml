@@ -38,7 +38,7 @@
                         <joint name="left_leg" type="hinge" axis="1 0 0" pos = "0.2 0 0.8" range = "-1.56 1.56" limited="true"/>
                         <geom type="mesh" mesh="upper_left_leg" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
                         <body>
-                            <joint name="left_knee" type="hinge" axis="1 0 0" pos = "0 0.05 0.5" range ="-1.56 1.56" limited="true"/>
+                            <joint name="left_knee" type="hinge" axis="1 0 0" pos = "0 0.05 0.5" range ="0 1.56" limited="true"/>
                             <geom type="mesh" mesh="lower_left_leg" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
                             <body>
                                 <joint name="left_ankle" type="hinge" axis="1 0 0" pos = "0 0 0.06" range = "-0.52 0.52" limited="true"/>
@@ -62,7 +62,7 @@
                         <joint name="right_leg" type="hinge" axis="1 0 0" pos = "-0.2 0.05 0.85" range = "-1.56 1.56" limited="true"/>
                         <geom type="mesh" mesh="right_upper_leg" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
                         <body>
-                            <joint name="right_knee" type="hinge" axis="1 0 0" pos = "0 0.05 0.5" range = "-1.56 1.56" limited="true"/>
+                            <joint name="right_knee" type="hinge" axis="1 0 0" pos = "0 0.05 0.5" range = "0 1.56" limited="true"/>
                             <geom type="mesh" mesh="right_lower_leg" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
                             <body>
                                 <joint name="right_ankle" type="hinge" axis="1 0 0" pos = "0 0 0.06" range = "-0.52 0.52" limited="true"/>
