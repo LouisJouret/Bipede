@@ -1,5 +1,5 @@
 <mujoco model="bipede">
-    <option gravity = "0 0 -9.81" timestep="0.005"/>
+    <option gravity = "0 0 -9.81" timestep="0.002"/>
     <compiler meshdir="assets" angle="radian"/>
     <asset>
         <mesh name="hip" file="hip.obj" scale="0.001 0.001 0.001"/>
@@ -81,19 +81,19 @@
         <camera name="following_camera" pos="0 0 1" euler="0 0 0"/>
     </worldbody>
     <actuator>
-        <motor name="leftroll"      joint="left_roll"   gear="1"   ctrlrange="-50 50" />
-        <motor name="leftyaw"       joint="left_yaw"    gear="1"   ctrlrange="-50 50" />
-        <motor name="left_leg"      joint="left_leg"    gear="1"   ctrlrange="-50 50" />
-        <motor name="left_knee"     joint="left_knee"   gear="1"   ctrlrange="-50 50" />
-        <motor name="left_ankle"    joint="left_ankle"  gear="1"   ctrlrange="-50 50" />
-        <motor name="left_toes"     joint="left_toes"   gear="1"   ctrlrange="-50 50" />
+        <motor name="leftroll"      joint="left_roll"   gear="1"   ctrlrange="-100 100" />
+        <motor name="leftyaw"       joint="left_yaw"    gear="1"   ctrlrange="-100 100" />
+        <motor name="left_leg"      joint="left_leg"    gear="1"   ctrlrange="-100 100" />
+        <motor name="left_knee"     joint="left_knee"   gear="1"   ctrlrange="-100 100" />
+        <motor name="left_ankle"    joint="left_ankle"  gear="1"   ctrlrange="-100 100" />
+        <motor name="left_toes"     joint="left_toes"   gear="1"   ctrlrange="-100 100" />
 
-        <motor name="rightroll"     joint="right_roll"  gear="1"   ctrlrange="-50 50" />
-        <motor name="rightyaw"      joint="right_yaw"   gear="1"   ctrlrange="-50 50" />
-        <motor name="right_leg"     joint="right_leg"   gear="1"   ctrlrange="-50 50" />
-        <motor name="right_knee"    joint="right_knee"  gear="1"   ctrlrange="-50 50" />
-        <motor name="right_ankle"   joint="right_ankle" gear="1"   ctrlrange="-50 50" />
-        <motor name="right_toes"    joint="right_toes"  gear="1"   ctrlrange="-50 50" />
+        <motor name="rightroll"     joint="right_roll"  gear="1"   ctrlrange="-100 100" />
+        <motor name="rightyaw"      joint="right_yaw"   gear="1"   ctrlrange="-100 100" />
+        <motor name="right_leg"     joint="right_leg"   gear="1"   ctrlrange="-100 100" />
+        <motor name="right_knee"    joint="right_knee"  gear="1"   ctrlrange="-100 100" />
+        <motor name="right_ankle"   joint="right_ankle" gear="1"   ctrlrange="-100 100" />
+        <motor name="right_toes"    joint="right_toes"  gear="1"   ctrlrange="-100 100" />
 
         <!-- <position name="leftroll"       joint="left_roll"   gear="2"   ctrlrange="-30 30" />
         <position name="leftyaw"        joint="left_yaw"    gear="2"   ctrlrange="-30 30" />
