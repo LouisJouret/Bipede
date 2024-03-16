@@ -44,7 +44,7 @@
                                 <joint name="left_ankle" type="hinge" axis="1 0 0" pos = "0 0 0.06" range = "-0.52 0.52" limited="true"/>
                                 <geom type="mesh" mesh="left_back_foot" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
                                 <body>
-                                    <joint name="left_toes" type="hinge" axis="1 0 0" pos = "0.1 0 0.03" range = "-0.52 0.52" limited="true"/>
+                                    <!-- <joint name="left_toes" type="hinge" axis="1 0 0" pos = "0.1 0 0.03" range = "-0.52 0.52" limited="true"/> -->
                                     <geom type="mesh" mesh="left_front_foot" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
                                 </body>
                             </body>
@@ -68,7 +68,7 @@
                                 <joint name="right_ankle" type="hinge" axis="1 0 0" pos = "0 0 0.06" range = "-0.52 0.52" limited="true"/>
                                 <geom type="mesh" mesh="right_back_foot" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
                                 <body>
-                                    <joint name="right_toes" type="hinge" axis="1 0 0" pos = "0.1 0 0.03" range = "-0.52 0.52" limited="true"/>
+                                    <!-- <joint name="right_toes" type="hinge" axis="1 0 0" pos = "0.1 0 0.03" range = "-0.52 0.52" limited="true"/> -->
                                     <geom type="mesh" mesh="right_front_foot" euler="0 0 1.5708" pos="0 0 0" rgba="0.2 0.2 0.1 1"/>
                                 </body>
                             </body>
@@ -86,14 +86,14 @@
         <motor name="left_leg"      joint="left_leg"    gear="1"   ctrlrange="-100 100" />
         <motor name="left_knee"     joint="left_knee"   gear="1"   ctrlrange="-100 100" />
         <motor name="left_ankle"    joint="left_ankle"  gear="1"   ctrlrange="-100 100" />
-        <motor name="left_toes"     joint="left_toes"   gear="1"   ctrlrange="-100 100" />
+        <!-- <motor name="left_toes"     joint="left_toes"   gear="1"   ctrlrange="-100 100" /> -->
 
         <motor name="rightroll"     joint="right_roll"  gear="1"   ctrlrange="-100 100" />
         <motor name="rightyaw"      joint="right_yaw"   gear="1"   ctrlrange="-100 100" />
         <motor name="right_leg"     joint="right_leg"   gear="1"   ctrlrange="-100 100" />
         <motor name="right_knee"    joint="right_knee"  gear="1"   ctrlrange="-100 100" />
         <motor name="right_ankle"   joint="right_ankle" gear="1"   ctrlrange="-100 100" />
-        <motor name="right_toes"    joint="right_toes"  gear="1"   ctrlrange="-100 100" />
+        <!-- <motor name="right_toes"    joint="right_toes"  gear="1"   ctrlrange="-100 100" /> -->
 
         <!-- <position name="leftroll"       joint="left_roll"   gear="2"   ctrlrange="-30 30" />
         <position name="leftyaw"        joint="left_yaw"    gear="2"   ctrlrange="-30 30" />
