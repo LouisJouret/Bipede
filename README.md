@@ -7,6 +7,8 @@
 
 # Bipede
 
+This is a personal project.
+
 This repository includes the code for the Bipede project. It contains:
 
 The CAD files in the assets folder, which include the mesh of the parts
