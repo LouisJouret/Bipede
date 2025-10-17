@@ -7,9 +7,8 @@
 
 # Bipede
 
-Ce repositoire inclut le code du projet Bipede. Ceci inclut:
+This repository includes the code for the Bipede project. It contains:
 
-
-- les fichiers CAD dans le dossier *assets* qui comporte le mesh des pièces
-- le model dynamique du bipède avec tous les liens entre les pièces, encodé dans le fichier XML
-- le code de *Reinforcement Learning* qui comporte l'apprentissage et l'évaluation du contrôleur est actuellement encore sous forme de Jupyter Notebook
+The CAD files in the assets folder, which include the mesh of the parts
+The dynamic model of the biped, with all the links between the parts, encoded in the XML file
+The Reinforcement Learning code, which includes the training and evaluation of the controller, currently still in the form of a Jupyter Notebook
