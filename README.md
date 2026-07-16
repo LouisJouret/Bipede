@@ -19,12 +19,7 @@ The repository contains:
 
 ## Results
 
-[`gait_progress.mp4`](gait_progress.mp4) shows the gait improving over training: one
-clip every few thousand episodes, each labelled with the episode count, concatenated in
-order — from falling over immediately at episode 1,000 to walking at episode 200,000.
-Click the frame below to watch it:
-
-[![gait progress video](gait_poster.png)](gait_progress.mp4)
+https://github.com/user-attachments/assets/0d9a1505-98ac-4a51-b697-bbc9903bcc4b
 
 The learning curve is in `progress_ppo.png`, regenerated at every checkpoint:
 
