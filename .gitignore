@@ -1,3 +1,5 @@
 env
 MUJOCO_LOG.TXT
-networks
+.venv
+networks_ppo
+gait_videos
