@@ -19,7 +19,7 @@ The repository contains:
 
 ## Results
 
-https://github.com/user-attachments/assets/0d9a1505-98ac-4a51-b697-bbc9903bcc4b
+https://github.com/user-attachments/assets/36ef6f29-8426-4234-baa6-e87809ea6633
 
 The learning curve is in `progress_ppo.png`, regenerated at every checkpoint:
 
